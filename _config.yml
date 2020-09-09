@@ -29,6 +29,13 @@ url: "https://aflaht.github.io" # the base hostname & protocol for your site, e.
 twitter_username: none
 github_username: aflaht
 
+author: Aflah Tazakka
+
+#custom field
+copyright: "myblog"
+#display a logo instead of a text
+title-logo: /images/myblog_custom-size.png
+
 # Build settings
 # theme: minima
 plugins:
