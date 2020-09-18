@@ -1,0 +1,19 @@
+items:
+  - rank: 1
+    title: Naruto
+    subitems:
+      - rank: 1.1
+        title: Minato
+  - rank: 2
+    title: Saburo
+    subitems: []
+  - rank: 4
+    title: Rabuto
+    subitems: []
+  - rank: 3
+    title: Goburo
+    subitems:
+      - rank: 3.1
+        title: Gobuto
+      - rank: 3.2
+        title: Goruto

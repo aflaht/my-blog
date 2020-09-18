@@ -1,0 +1,41 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Data</title>
+  </head>
+  <body>
+    <h1>Using Custom Data</h1>
+    <h3>CSV file</h3>
+    {%- for anime in site.data.data-csv -%}
+    <p><strong>{{anime.rank}}: </strong>{{anime.title}}</p>
+    {%- endfor -%}
+    <h3>JSON file</h3>
+    {%- for anime in site.data.data-json.items -%}
+    <p><strong>{{anime.rank}}: </strong>{{anime.title}}</p>
+    {%- endfor -%}
+    <h3>YML file</h3>
+    {%- for anime in site.data.data-yml.items -%}
+    <p><strong>{{anime.rank}}: </strong>{{anime.title}}</p>
+    {%- if anime.subitems -%} {%- for subitem in anime.subitems -%}
+    <p>
+      <strong>&nbsp&nbsp&nbsp&nbspSub Rank:</strong>
+      {{subitem.rank}}.&nbsp{{subitem.title}}
+    </p>
+    {%- endfor -%} {%- endif -%} {%- endfor -%}
+    <h3>YML file Sorted by Rank</h3>
+    {%- assign animes = site.data.data-yml.items | sort: "rank" -%} {%- for
+    anime in animes -%}
+    <p><strong>{{anime.rank}}: </strong>{{anime.title}}</p>
+    {%- if anime.subitems -%} {%- for subitem in anime.subitems -%}
+    <p>
+      <strong>&nbsp&nbsp&nbsp&nbspSub Rank:</strong>
+      {{subitem.rank}}.&nbsp{{subitem.title}}
+    </p>
+    {%- endfor -%} {%- endif -%} {%- endfor -%}
+  </body>
+</html>
